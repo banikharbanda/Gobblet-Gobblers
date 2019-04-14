@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74484BE12263F7B300D57419 /* piece.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74484BDF2263F7B300D57419 /* piece.cpp */; };
 		74933D852219DBE900561E03 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74933D842219DBE900561E03 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		74484BDF2263F7B300D57419 /* piece.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = piece.cpp; sourceTree = "<group>"; };
+		74484BE02263F7B300D57419 /* piece.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = piece.hpp; sourceTree = "<group>"; };
 		74933D812219DBE900561E03 /* Gobblet Gobblers */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Gobblet Gobblers"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74933D842219DBE900561E03 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				74933D842219DBE900561E03 /* main.cpp */,
+				74484BDF2263F7B300D57419 /* piece.cpp */,
+				74484BE02263F7B300D57419 /* piece.hpp */,
 			);
 			path = "Gobblet Gobblers";
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74484BE12263F7B300D57419 /* piece.cpp in Sources */,
 				74933D852219DBE900561E03 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
