@@ -7,3 +7,13 @@
 //
 
 #include "piece.hpp"
+
+
+
+Player Piece:: getPlayer() {
+    return this->player;
+}
+
+Piece::Size Piece:: getSize() {
+    return this->size;
+}

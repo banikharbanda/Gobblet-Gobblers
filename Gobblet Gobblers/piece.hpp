@@ -10,13 +10,20 @@
 #define piece_hpp
 
 #include <stdio.h>
-
-enum Colour {orange, blue};
-enum Size {small, medium, large};
+#include "player.hpp"
 
 class Piece {
-    Colour colour;
+    
+    enum Size {small, medium, large};
+    
+private:
+    Player player;
     Size size;
+    
+public:
+    Piece(Player player, Size size): player {player}, size {size} {}
+    Player getPlayer();
+    Size getSize();
 };
 
 #endif /* piece_hpp */
