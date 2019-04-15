@@ -9,6 +9,20 @@
 #ifndef cell_hpp
 #define cell_hpp
 
-#include <stdio.h>
+#include "piece.hpp"
+#include <stack>
+#include <iostream>
+#include <string>
+
+
+class Cell {
+private:
+    std::stack<Piece *> piecesOnCell;
+public:
+    void updateDisplay();
+    void place(Piece *piece);
+    void remove();
+  //  Piece getTop(Piece piece);
+};
 
 #endif /* cell_hpp */

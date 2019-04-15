@@ -10,19 +10,22 @@
 #define piece_hpp
 
 #include <stdio.h>
-#include "player.hpp"
+
+class Player;
 
 class Piece {
     
-    enum Size {small, medium, large};
+public:
+    enum Size {SMALL, MEDIUM, LARGE};
     
 private:
-    Player player;
+    Player *player;
     Size size;
     
+    
 public:
-    Piece(Player player, Size size): player {player}, size {size} {}
-    Player getPlayer();
+    Piece(Player *_player, Size _size);
+    Player *getPlayer();
     Size getSize();
 };
 

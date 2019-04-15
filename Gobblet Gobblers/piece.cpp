@@ -8,12 +8,15 @@
 
 #include "piece.hpp"
 
+Piece::Piece(Player *_player, Size _size) {
+    player = _player;
+    size = _size;
+}
 
-
-Player Piece:: getPlayer() {
-    return this->player;
+Player *Piece:: getPlayer() {
+    return player;
 }
 
 Piece::Size Piece:: getSize() {
-    return this->size;
+    return size;
 }
