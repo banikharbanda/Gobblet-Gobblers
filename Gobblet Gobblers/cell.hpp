@@ -19,10 +19,14 @@
 class Cell : public Subject {
 private:
     std::stack<Piece *> piecesOnCell = {};
+    bool isEmpty();
+    Piece *getTop();
 public:
-    
+    Cell();
     void place(Piece *piece);
     void remove();
+    //CHANGETHIS
+    ~Cell(){};
   //  Piece getTop(Piece piece);
 };
 

@@ -9,7 +9,7 @@
 #include "player.hpp"
 
 
-Player::Player(std::string _colour): colour{_colour} {
+Player::Player(std::string _colour): sColour{_colour} {
     pieces.emplace_back(Piece(this, Piece::Size::SMALL));
     pieces.emplace_back(Piece(this, Piece::Size::SMALL));
     pieces.emplace_back(Piece(this, Piece::Size::MEDIUM));
@@ -19,5 +19,5 @@ Player::Player(std::string _colour): colour{_colour} {
 }
 
 std::string Player::getColour() {
-    return colour;
+    return sColour;
 }

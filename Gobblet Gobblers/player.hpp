@@ -15,10 +15,10 @@
 
 class Player {
     std::vector<Piece> pieces;
-    std::string colour;
+    std::string sColour;
     
 public:
-    Player(std::string colour);
+    Player(std::string _colour);
     std::string getColour();
 };
 
