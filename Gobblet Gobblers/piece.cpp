@@ -21,3 +21,11 @@ Player *Piece:: getPlayer() {
 Piece::Size Piece:: getSize() {
     return size;
 }
+
+Cell *Piece::getCell() {
+    return cell;
+}
+
+void Piece::setCell(Cell * _cell) {
+    cell = _cell;
+}

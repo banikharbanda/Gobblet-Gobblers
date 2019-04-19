@@ -9,6 +9,9 @@
 #ifndef piece_hpp
 #define piece_hpp
 
+#include <string>
+#include <iostream>
+
 class Player;
 class Cell;
 
@@ -26,6 +29,8 @@ private:
 public:
     Piece(Player *_player, Size _size);
     Player *getPlayer();
+    Cell *getCell();
+    void setCell(Cell * _cell);
     Size getSize();
 };
 
