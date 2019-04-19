@@ -15,7 +15,8 @@
 class Board : public Observer{
 private:
     std::vector<std::vector<Cell>> cells;
-    
+public:
+    void notify(Event event);
     
 };
 

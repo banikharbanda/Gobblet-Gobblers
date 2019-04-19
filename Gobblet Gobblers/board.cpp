@@ -9,3 +9,6 @@
 #include "board.hpp"
 
 
+void notify(Event event) {
+    
+}

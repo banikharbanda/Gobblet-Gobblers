@@ -13,10 +13,11 @@
 
 int main(int argc, const char * argv[]) {
     Player p("red");
-  //  Cell c;
-    Piece pi(&p, Piece::Size::SMALL);
-    //c.place(&pi);
-    //c.remove();
+    Cell c;
+    Piece pi(&p, Piece::Size::LARGE);
+    c.place(&pi);
+    std::cout << c.getTop()->getSize() <<std::endl;
+    c.remove();
     std::cout << p.getColour() << std::endl;
     return 0;
 }

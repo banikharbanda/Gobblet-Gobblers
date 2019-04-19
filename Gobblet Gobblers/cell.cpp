@@ -12,6 +12,8 @@ Cell::Cell() {
     piecesOnCell = {};
 }
 
+Cell::~Cell() {}
+
 bool Cell::isEmpty() {
     return piecesOnCell.empty();
 }
@@ -46,3 +48,5 @@ void Cell::remove() {
     }
     notifyObservers(REMOVE);
 }
+
+
