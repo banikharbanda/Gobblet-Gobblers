@@ -10,6 +10,7 @@
 		74484BE12263F7B300D57419 /* piece.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74484BDF2263F7B300D57419 /* piece.cpp */; };
 		74484BE42263F97700D57419 /* cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74484BE22263F97700D57419 /* cell.cpp */; };
 		74484BE72263FDD100D57419 /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74484BE52263FDD100D57419 /* player.cpp */; };
+		74484BEA22694DF000D57419 /* board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74484BE822694DF000D57419 /* board.cpp */; };
 		74933D852219DBE900561E03 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74933D842219DBE900561E03 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,11 @@
 		74484BE32263F97700D57419 /* cell.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cell.hpp; sourceTree = "<group>"; };
 		74484BE52263FDD100D57419 /* player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = player.cpp; sourceTree = "<group>"; };
 		74484BE62263FDD100D57419 /* player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = player.hpp; sourceTree = "<group>"; };
+		74484BE822694DF000D57419 /* board.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = board.cpp; sourceTree = "<group>"; };
+		74484BE922694DF000D57419 /* board.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = board.hpp; sourceTree = "<group>"; };
+		74484BEC2269533B00D57419 /* subject.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = subject.hpp; sourceTree = "<group>"; };
+		74484BEF22695A4200D57419 /* event.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = event.hpp; sourceTree = "<group>"; };
+		74484BF122695C8500D57419 /* observer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = observer.hpp; sourceTree = "<group>"; };
 		74933D812219DBE900561E03 /* Gobblet Gobblers */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Gobblet Gobblers"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74933D842219DBE900561E03 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +77,11 @@
 				74484BE02263F7B300D57419 /* piece.hpp */,
 				74484BE22263F97700D57419 /* cell.cpp */,
 				74484BE32263F97700D57419 /* cell.hpp */,
+				74484BE822694DF000D57419 /* board.cpp */,
+				74484BE922694DF000D57419 /* board.hpp */,
+				74484BEC2269533B00D57419 /* subject.hpp */,
+				74484BF122695C8500D57419 /* observer.hpp */,
+				74484BEF22695A4200D57419 /* event.hpp */,
 				74484BE52263FDD100D57419 /* player.cpp */,
 				74484BE62263FDD100D57419 /* player.hpp */,
 			);
@@ -134,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74484BE72263FDD100D57419 /* player.cpp in Sources */,
+				74484BEA22694DF000D57419 /* board.cpp in Sources */,
 				74484BE12263F7B300D57419 /* piece.cpp in Sources */,
 				74933D852219DBE900561E03 /* main.cpp in Sources */,
 				74484BE42263F97700D57419 /* cell.cpp in Sources */,

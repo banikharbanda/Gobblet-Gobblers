@@ -9,16 +9,11 @@
 #include "cell.hpp"
 
 
-void Cell::updateDisplay() {
-    
-}
 
 void Cell::place(Piece *piece) {
     piecesOnCell.push(piece);
-    updateDisplay();
 }
 
 void Cell::remove() {
     piecesOnCell.pop();
-    updateDisplay();
 }

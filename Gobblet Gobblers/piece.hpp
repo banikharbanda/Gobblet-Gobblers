@@ -9,9 +9,8 @@
 #ifndef piece_hpp
 #define piece_hpp
 
-#include <stdio.h>
-
 class Player;
+class Cell;
 
 class Piece {
     
@@ -21,6 +20,7 @@ public:
 private:
     Player *player;
     Size size;
+    Cell *cell;
     
     
 public:

@@ -14,12 +14,13 @@
 #include <iostream>
 #include <string>
 
+#include "subject.hpp"
 
-class Cell {
+class Cell : public Subject {
 private:
-    std::stack<Piece *> piecesOnCell;
+    std::stack<Piece *> piecesOnCell = {};
 public:
-    void updateDisplay();
+    
     void place(Piece *piece);
     void remove();
   //  Piece getTop(Piece piece);

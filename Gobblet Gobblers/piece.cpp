@@ -11,6 +11,7 @@
 Piece::Piece(Player *_player, Size _size) {
     player = _player;
     size = _size;
+    cell = nullptr;
 }
 
 Player *Piece:: getPlayer() {
