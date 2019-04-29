@@ -11,6 +11,7 @@
 #include <vector>
 #include <string>
 #include "piece.hpp"
+#include <sstream>
 
 
 class Player {
@@ -20,6 +21,7 @@ class Player {
 public:
     Player(std::string _colour);
     std::string getColour();
+    void move(std::string sPiece, std::string sCell);
 };
 
 #endif /* player_hpp */

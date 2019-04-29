@@ -21,3 +21,6 @@ Player::Player(std::string _colour): sColour{_colour} {
 std::string Player::getColour() {
     return sColour;
 }
+
+void move(std::string sPiece, std::string sCell) {
+}

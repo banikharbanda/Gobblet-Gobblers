@@ -12,6 +12,7 @@
 		74484BE72263FDD100D57419 /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74484BE52263FDD100D57419 /* player.cpp */; };
 		74484BEA22694DF000D57419 /* board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74484BE822694DF000D57419 /* board.cpp */; };
 		74484BF3226A457600D57419 /* subject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74484BF2226A457600D57419 /* subject.cpp */; };
+		747AA357227793D900B2DB65 /* textDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 747AA355227793D900B2DB65 /* textDisplay.cpp */; };
 		74933D852219DBE900561E03 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74933D842219DBE900561E03 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,8 @@
 		74484BEF22695A4200D57419 /* event.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = event.hpp; sourceTree = "<group>"; };
 		74484BF122695C8500D57419 /* observer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = observer.hpp; sourceTree = "<group>"; };
 		74484BF2226A457600D57419 /* subject.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = subject.cpp; sourceTree = "<group>"; };
+		747AA355227793D900B2DB65 /* textDisplay.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = textDisplay.cpp; sourceTree = "<group>"; };
+		747AA356227793D900B2DB65 /* textDisplay.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = textDisplay.hpp; sourceTree = "<group>"; };
 		74933D812219DBE900561E03 /* Gobblet Gobblers */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Gobblet Gobblers"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74933D842219DBE900561E03 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +90,8 @@
 				74484BEF22695A4200D57419 /* event.hpp */,
 				74484BE52263FDD100D57419 /* player.cpp */,
 				74484BE62263FDD100D57419 /* player.hpp */,
+				747AA355227793D900B2DB65 /* textDisplay.cpp */,
+				747AA356227793D900B2DB65 /* textDisplay.hpp */,
 			);
 			path = "Gobblet Gobblers";
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 				74484BF3226A457600D57419 /* subject.cpp in Sources */,
 				74484BE72263FDD100D57419 /* player.cpp in Sources */,
 				74484BEA22694DF000D57419 /* board.cpp in Sources */,
+				747AA357227793D900B2DB65 /* textDisplay.cpp in Sources */,
 				74484BE12263F7B300D57419 /* piece.cpp in Sources */,
 				74933D852219DBE900561E03 /* main.cpp in Sources */,
 				74484BE42263F97700D57419 /* cell.cpp in Sources */,
