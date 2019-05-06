@@ -24,7 +24,7 @@ private:
 public:
     Piece *getTop();
     Cell();
-    void place(Piece *piece);
+    bool place(Piece *piece);
     void remove();
     //CHANGETHIS
     ~Cell() override;

@@ -10,13 +10,19 @@
 #define board_hpp
 #include <vector>
 #include "cell.hpp"
+#include "piece.hpp"
 #include "observer.hpp"
 
 class Board : public Observer{
 private:
     std::vector<std::vector<Cell>> cells;
+    std::vector<Cell> makeRow(int size);
+    
 public:
+    Board(int size);
+    bool move(Piece *piece, int cellRow, int cellColumn);
     void notify(Event event);
+    int checkWin();
     
 };
 

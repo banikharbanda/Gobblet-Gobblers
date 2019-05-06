@@ -8,14 +8,15 @@
 
 #include "piece.hpp"
 
-Piece::Piece(Player *_player, Size _size) {
-    player = _player;
+Piece::Piece(std::string _colour, Size _size, int _id) {
+    sColour = _colour;
     size = _size;
+    id = _id;
     cell = nullptr;
 }
 
-Player *Piece:: getPlayer() {
-    return player;
+std::string Piece:: getColour() {
+    return sColour;
 }
 
 Piece::Size Piece:: getSize() {

@@ -7,17 +7,11 @@
 //
 
 #include <iostream>
-#include "player.hpp"
+#include "controller.hpp"
 #include <string>
-#include "cell.hpp"
 
 int main(int argc, const char * argv[]) {
-    Player p("red");
-    Cell c;
-    Piece pi(&p, Piece::Size::LARGE);
-    c.place(&pi);
-    std::cout << c.getTop()->getSize() <<std::endl;
-    c.remove();
-    std::cout << p.getColour() << std::endl;
+    Controller c("Red", "Blue", 3);
+    c.play();
     return 0;
 }

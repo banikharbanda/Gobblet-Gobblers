@@ -10,20 +10,22 @@
 #define textDisplay_hpp
 
 #include "observer.hpp"
-
+#include "model.hpp"
 #include <iostream>
 
 class TextDisplay: public Observer{
 private:
     
     TextDisplay();
-    void displayBoard();
-    void displayCell();
+    
+    void displayCell(Cell *cell);
     void displayPlayerInfo();
     
 public:
     void notify(Event event);
     static TextDisplay &getInstance();
+    void display();
+    void displayBoard();
     ~TextDisplay();
     
     

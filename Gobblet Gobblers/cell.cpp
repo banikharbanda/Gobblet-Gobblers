@@ -25,17 +25,18 @@ Piece * Cell::getTop() {
     return piecesOnCell.top();
 }
 
-void Cell::place(Piece *piece) {
+bool Cell::place(Piece *piece) {
     if (!isEmpty()) {
         Piece *top = getTop();
         if (top->getSize() >= piece->getSize()) {
             std::cerr << "This piece is too small to be placed here" << std::endl;
-            exit(1);
+            return false;
         }
     }
     piecesOnCell.push(piece);
     piece->setCell(this);
-    notifyObservers(PLACE);
+   // notifyObservers(PLACE);
+    return true;
 }
 
 void Cell::remove() {

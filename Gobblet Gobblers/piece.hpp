@@ -21,14 +21,15 @@ public:
     enum Size {SMALL, MEDIUM, LARGE};
     
 private:
-    Player *player;
+    std::string sColour;
     Size size;
     Cell *cell;
+    int id;
     
     
 public:
-    Piece(Player *_player, Size _size);
-    Player *getPlayer();
+    Piece(std::string _colour, Size _size, int _id);
+    std::string getColour();
     Cell *getCell();
     void setCell(Cell * _cell);
     Size getSize();

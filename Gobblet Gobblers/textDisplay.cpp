@@ -24,11 +24,16 @@ void TextDisplay::notify(Event event){
     displayPlayerInfo();
 }
 
+void TextDisplay::display() {
+    TextDisplay::displayBoard();
+    TextDisplay::displayPlayerInfo();
+}
+
 void TextDisplay::displayBoard() {
     std::cout << "TODO: Display Board" << std::endl;
 }
 
-void TextDisplay::displayCell() {
+void TextDisplay::displayCell(Cell *cell) {
     std::cout << "TODO: Display Cell" << std::endl;
 }
 

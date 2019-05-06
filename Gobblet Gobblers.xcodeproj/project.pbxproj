@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		742A478A227F8BFC00357EAC /* model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 742A4788227F8BFC00357EAC /* model.cpp */; };
+		742A478D227F8C4F00357EAC /* controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 742A478B227F8C4F00357EAC /* controller.cpp */; };
 		74484BE12263F7B300D57419 /* piece.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74484BDF2263F7B300D57419 /* piece.cpp */; };
 		74484BE42263F97700D57419 /* cell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74484BE22263F97700D57419 /* cell.cpp */; };
 		74484BE72263FDD100D57419 /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 74484BE52263FDD100D57419 /* player.cpp */; };
@@ -29,6 +31,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		742A4788227F8BFC00357EAC /* model.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = model.cpp; sourceTree = "<group>"; };
+		742A4789227F8BFC00357EAC /* model.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = model.hpp; sourceTree = "<group>"; };
+		742A478B227F8C4F00357EAC /* controller.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = controller.cpp; sourceTree = "<group>"; };
+		742A478C227F8C4F00357EAC /* controller.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = controller.hpp; sourceTree = "<group>"; };
 		74484BDF2263F7B300D57419 /* piece.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = piece.cpp; sourceTree = "<group>"; };
 		74484BE02263F7B300D57419 /* piece.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = piece.hpp; sourceTree = "<group>"; };
 		74484BE22263F97700D57419 /* cell.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cell.cpp; sourceTree = "<group>"; };
@@ -88,8 +94,12 @@
 				74484BF2226A457600D57419 /* subject.cpp */,
 				74484BF122695C8500D57419 /* observer.hpp */,
 				74484BEF22695A4200D57419 /* event.hpp */,
-				74484BE52263FDD100D57419 /* player.cpp */,
+				742A4788227F8BFC00357EAC /* model.cpp */,
+				742A4789227F8BFC00357EAC /* model.hpp */,
+				742A478B227F8C4F00357EAC /* controller.cpp */,
+				742A478C227F8C4F00357EAC /* controller.hpp */,
 				74484BE62263FDD100D57419 /* player.hpp */,
+				74484BE52263FDD100D57419 /* player.cpp */,
 				747AA355227793D900B2DB65 /* textDisplay.cpp */,
 				747AA356227793D900B2DB65 /* textDisplay.hpp */,
 			);
@@ -152,9 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				742A478D227F8C4F00357EAC /* controller.cpp in Sources */,
 				74484BF3226A457600D57419 /* subject.cpp in Sources */,
 				74484BE72263FDD100D57419 /* player.cpp in Sources */,
 				74484BEA22694DF000D57419 /* board.cpp in Sources */,
+				742A478A227F8BFC00357EAC /* model.cpp in Sources */,
 				747AA357227793D900B2DB65 /* textDisplay.cpp in Sources */,
 				74484BE12263F7B300D57419 /* piece.cpp in Sources */,
 				74933D852219DBE900561E03 /* main.cpp in Sources */,

@@ -11,6 +11,7 @@
 #include <vector>
 #include <string>
 #include "piece.hpp"
+#include "cell.hpp"
 #include <sstream>
 
 
@@ -21,7 +22,9 @@ class Player {
 public:
     Player(std::string _colour);
     std::string getColour();
-    void move(std::string sPiece, std::string sCell);
+    Piece *getPiece(Piece::Size size, int id);
+    std::vector<Piece *> movablePieces();
+   // void move(std::string sPiece, std::string sCell);
 };
 
 #endif /* player_hpp */
