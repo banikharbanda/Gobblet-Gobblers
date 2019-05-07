@@ -10,7 +10,7 @@
 #define cell_hpp
 
 #include "piece.hpp"
-#include <stack>
+#include <vector>
 #include <iostream>
 #include <string>
 
@@ -18,12 +18,12 @@
 
 class Cell : public Subject {
 private:
-    std::stack<Piece *> piecesOnCell = {};
-    bool isEmpty();
+    std::vector<Piece *> piecesOnCell;
     
 public:
     Piece *getTop();
     Cell();
+    
     bool place(Piece *piece);
     void remove();
     //CHANGETHIS

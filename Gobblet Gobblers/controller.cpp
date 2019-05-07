@@ -43,12 +43,10 @@ void Controller::play() {
             std::string sCell;
             iss >> sPiece;
             iss >> sCell;
-            std::istringstream sz(size);
-            std::string len;
-            sz >> len;
+            std::string len = std::to_string(size);
             if (sCell.length() == 2 && sCell[0] <= len[0] && sCell[1] <= len[0] && sCell[0] >= '1' && sCell[1] >= '1') {
-                int cellRow = static_cast<int>(sCell[0]);
-                int cellColumn = static_cast<int>(sCell[1]);
+                int cellRow = sCell[0] - 49;
+                int cellColumn = sCell[1] - 49;
                 Piece *p;
                 if (sPiece == "s1") {
                     p = currPlayer->getPiece(Piece::Size::SMALL, 1);

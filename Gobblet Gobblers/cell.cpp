@@ -8,42 +8,39 @@
 
 #include "cell.hpp"
 
-Cell::Cell() {
-    piecesOnCell = {};
-}
+Cell::Cell() {}
 
-Cell::~Cell() {}
-
-bool Cell::isEmpty() {
-    return piecesOnCell.empty();
+Cell::~Cell() {
 }
 
 Piece * Cell::getTop() {
-    if (isEmpty()) {
+    if (piecesOnCell.empty()) {
         return nullptr;
+    } else {
+        return piecesOnCell.back();
     }
-    return piecesOnCell.top();
 }
 
 bool Cell::place(Piece *piece) {
-    if (!isEmpty()) {
+    if (!piecesOnCell.empty()) {
         Piece *top = getTop();
         if (top->getSize() >= piece->getSize()) {
             std::cerr << "This piece is too small to be placed here" << std::endl;
             return false;
         }
     }
-    piecesOnCell.push(piece);
+    piecesOnCell.push_back(piece);
     piece->setCell(this);
    // notifyObservers(PLACE);
     return true;
 }
 
 void Cell::remove() {
-    if (!isEmpty()) {
+    if (!piecesOnCell.empty()) {
         getTop()->setCell(nullptr);
-        piecesOnCell.pop();
+        piecesOnCell.pop_back();
     } else {
+        // TODO: Change this to return false
         std::cerr << "There are no pieces on this cell to remove!" << std::endl;
         exit(1);
     }
