@@ -35,16 +35,17 @@ bool Cell::place(Piece *piece) {
     return true;
 }
 
-void Cell::remove() {
+bool Cell::remove() {
     if (!piecesOnCell.empty()) {
         getTop()->setCell(nullptr);
         piecesOnCell.pop_back();
+        return true;
     } else {
         // TODO: Change this to return false
         std::cerr << "There are no pieces on this cell to remove!" << std::endl;
-        exit(1);
+        return false;
     }
-    notifyObservers(REMOVE);
+    //notifyObservers(REMOVE);
 }
 
 

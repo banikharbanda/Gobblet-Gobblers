@@ -17,11 +17,12 @@ std::vector<Cell> Board::makeRow(int size) {
     return row;
 }
 
-Board::Board(int size) {
-    for (int i = 0; i < size; i++) {
-        cells.emplace_back(makeRow(size));
+Board::Board(int _size) {
+    for (int i = 0; i < _size; i++) {
+        cells.emplace_back(makeRow(_size));
        // if (cells[i][0].getTop() == nullptr) std::cerr << "bleh" << std::endl;
     }
+    size = _size;
     /*
     for (int i = 0; i < size; i ++) {
         for (int j = 0; j < size; j++) {
@@ -32,6 +33,15 @@ Board::Board(int size) {
     */
 }
 
+
+int Board::getSize(){
+    return size;
+}
+
+std::vector<std::vector<Cell>> & Board::getCells() {
+    return cells;
+}
+
 bool Board::move(Piece *piece, int cellRow, int cellColumn) {
     Cell *pieceCell = piece->getCell();
     if (pieceCell == nullptr || pieceCell->getTop() == piece) {
@@ -39,8 +49,10 @@ bool Board::move(Piece *piece, int cellRow, int cellColumn) {
       //  if (moveCell == nullptr) std::cerr << "moveCell is null" << std::endl;
         Piece *moveCellPiece = moveCell->getTop();
         if (moveCellPiece == nullptr || moveCellPiece->getSize() < piece->getSize()) {
-            bool isSuccess = moveCell->place(piece);
-            return isSuccess;
+            bool isRemoved = true;
+            if (pieceCell != nullptr) isRemoved = pieceCell->remove();
+            bool isPlaced = moveCell->place(piece);
+            return isRemoved && isPlaced;
         } else {
             std::cerr << "This piece is too small to be placed on this cell" << std::endl;
             return false;

@@ -25,7 +25,7 @@ public:
     Cell();
     
     bool place(Piece *piece);
-    void remove();
+    bool remove();
     //CHANGETHIS
     ~Cell() override;
   //  Piece getTop(Piece piece);

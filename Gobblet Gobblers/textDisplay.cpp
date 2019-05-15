@@ -14,8 +14,9 @@ TextDisplay::TextDisplay() {
 TextDisplay::~TextDisplay() {
 }
 
-TextDisplay& TextDisplay::getInstance(){
+TextDisplay& TextDisplay::getInstance(Model * model){
     static TextDisplay T;
+    T.board = model->getBoard();
     return T;
 }
 
@@ -30,11 +31,40 @@ void TextDisplay::display() {
 }
 
 void TextDisplay::displayBoard() {
-    std::cout << "TODO: Display Board" << std::endl;
+    for(int i = 0; i < board->getSize(); i++) {
+        for (int k = 0; k < board->getSize(); k++) {
+            std::cout << "-------------";
+        }
+        std::cout << std::endl;
+        for (int k = 0; k < board->getSize(); k++) {
+            std::cout << "|           |";
+        }
+        std::cout << std::endl;
+        for (int j = 0; j < board->getSize(); j++) {
+            displayCell(&board->getCells()[i][j]);
+        }
+        std::cout << std::endl;
+        for (int k = 0; k < board->getSize(); k++) {
+            std::cout << "|           |";
+        }
+        std::cout << std::endl;
+    }
+    for (int k = 0; k < board->getSize(); k++) {
+        std::cout << "-------------";
+    }
+    std::cout << std::endl;
 }
 
 void TextDisplay::displayCell(Cell *cell) {
-    std::cout << "TODO: Display Cell" << std::endl;
+    Piece * p = cell->getTop();
+    if (p != nullptr) {
+    Piece::Size s = p->getSize();
+        int id = p->getId();
+    std::string colour = p->getColour();
+        std::cout << "|    " << colour << s << id <<"     |";
+    } else {
+        std::cout << "|           |" ;
+    }
 }
 
 void TextDisplay::displayPlayerInfo() {

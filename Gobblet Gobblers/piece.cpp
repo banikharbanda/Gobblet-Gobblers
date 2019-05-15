@@ -23,6 +23,10 @@ Piece::Size Piece:: getSize() {
     return size;
 }
 
+int Piece::getId() {
+    return id;
+}
+
 Cell *Piece::getCell() {
     return cell;
 }

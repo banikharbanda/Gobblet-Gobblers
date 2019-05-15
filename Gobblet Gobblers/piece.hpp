@@ -33,6 +33,7 @@ public:
     Cell *getCell();
     void setCell(Cell * _cell);
     Size getSize();
+    int getId();
 };
 
 #endif /* piece_hpp */

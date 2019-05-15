@@ -9,7 +9,7 @@
 #include "controller.hpp"
 
 // TODO ask from input
-Controller::Controller(std::string colour1, std::string colour2, int _size): model(colour1, colour2, _size), textDisplay(TextDisplay::getInstance()) {
+Controller::Controller(std::string colour1, std::string colour2, int _size): model(colour1, colour2, _size), textDisplay(TextDisplay::getInstance(&model)) {
     size = _size;
 }
 

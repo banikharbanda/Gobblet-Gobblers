@@ -17,11 +17,13 @@ class Board : public Observer{
 private:
     std::vector<std::vector<Cell>> cells;
     std::vector<Cell> makeRow(int size);
-    
+    int size;
 public:
     Board(int size);
     bool move(Piece *piece, int cellRow, int cellColumn);
     void notify(Event event);
+    int getSize();
+    std::vector<std::vector<Cell>> &getCells();
     int checkWin();
     
 };

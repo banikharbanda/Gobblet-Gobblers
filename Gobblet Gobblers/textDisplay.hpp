@@ -20,10 +20,11 @@ private:
     
     void displayCell(Cell *cell);
     void displayPlayerInfo();
+    Board * board;
     
 public:
     void notify(Event event);
-    static TextDisplay &getInstance();
+    static TextDisplay &getInstance(Model *model);
     void display();
     void displayBoard();
     ~TextDisplay();
