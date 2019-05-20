@@ -24,9 +24,9 @@ void Controller::play() {
     Player *p2 = model.getPlayer(2);
     Player *currPlayer = p1;
     Board *bd = model.getBoard();
-    int win = 0;
+    std::string win = "";
     
-    while (win == 0) {
+    while (win == "") {
         std::cout << "It is Player " << currPlayer->getColour() << "'s turn" << std::endl;
         std::string inputStr;
         std::getline(std::cin, inputStr);
@@ -64,10 +64,11 @@ void Controller::play() {
                     std::cerr << "Invalid piece" << std::endl;
                     continue;
                 }
-                bool isSuccess = bd->move(p, cellRow, cellColumn);
-                if (isSuccess) {
+                std::string status = bd->move(p, cellRow, cellColumn);
+                if (status != "Error") {
+                    win = status;
                     textDisplay.display();
-                    win = bd->checkWin();
+                    std::cout << "Size " << p->getSize() << " ID: " << p->getId() << std::endl;
                     currPlayer = changePlayer(currPlayer, p1, p2);
                 }
             }
@@ -84,7 +85,7 @@ void Controller::play() {
     }
     
     
-    
+    std::cout << "Player " << win << " won!" << std::endl;
     
     
     

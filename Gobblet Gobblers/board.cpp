@@ -42,25 +42,37 @@ std::vector<std::vector<Cell>> & Board::getCells() {
     return cells;
 }
 
-bool Board::move(Piece *piece, int cellRow, int cellColumn) {
+std::string Board::move(Piece *piece, int cellRow, int cellColumn) {
     Cell *pieceCell = piece->getCell();
+    std::string win = "";
     if (pieceCell == nullptr || pieceCell->getTop() == piece) {
         Cell *moveCell = &cells[cellRow][cellColumn];
-      //  if (moveCell == nullptr) std::cerr << "moveCell is null" << std::endl;
         Piece *moveCellPiece = moveCell->getTop();
         if (moveCellPiece == nullptr || moveCellPiece->getSize() < piece->getSize()) {
             bool isRemoved = true;
-            if (pieceCell != nullptr) isRemoved = pieceCell->remove();
+            if (pieceCell == nullptr) {
+                isRemoved = true;
+            } else if (pieceCell != nullptr && pieceCell->getTop() == piece) {
+                isRemoved = pieceCell->remove();
+            } else {
+                return "Error";
+            }
+            win = checkWin();
             bool isPlaced = moveCell->place(piece);
-            return isRemoved && isPlaced;
+            if (win != "") win = checkWin();
+            if (isRemoved && isPlaced) {
+                return win;
+            } else {
+                return "Error";
+            }
         } else {
             std::cerr << "This piece is too small to be placed on this cell" << std::endl;
-            return false;
+            return "Error";
         }
         
     } else {
         std::cerr << "This piece cannot be moved" << std::endl;
-        return false;
+        return "Error";
     }
 }
 
@@ -68,7 +80,53 @@ void Board::notify(Event event) {
     
 }
 
-int Board::checkWin() {
-    //TODO
-    return 0;
+std::string Board::isWin(std::vector<Cell> &row) {
+    Piece * p1 = row[0].getTop();
+    if (p1 != nullptr) {
+        for (int i = 1; i < size; i++) {
+            Piece *p2 = row[i].getTop();
+            if (p2 != nullptr) {
+                if (p1->getColour() != p2->getColour()) {
+                    return "";
+                }
+            } else {
+                return "";
+            }
+        }
+        return p1->getColour();
+    }
+    return "";
+}
+
+std::string Board::checkWin() {
+    // CHECK ROWS
+    for (int i = 0; i < size; i++) {
+        std::string win = isWin(cells[i]);
+        if (win != "") return win;
+    }
+    // CHECK COLUMNS
+    for (int j = 0; j < size; j++) {
+        std::vector<Cell> col;
+        for (int k = 0; k < size; k++) {
+            col.emplace_back(cells[k][j]);
+        }
+        std::string win = isWin(col);
+        if (win != "") return win;
+    }
+    // CHECK DIAGONAL1
+    std::vector<Cell> diag1;
+    for (int i = 0; i < size; i ++) {
+        diag1.emplace_back(cells[i][i]);
+    }
+    std::string win = isWin(diag1);
+    if (win != "") return win;
+    // CHECK DIAGONAL2
+    std::vector<Cell> diag2;
+    for (int i = 0; i < size; i ++) {
+        diag2.emplace_back(cells[i][size - i - 1]);
+    }
+    win = isWin(diag2);
+    if (win != "") return win;
+    
+    return "";
 }

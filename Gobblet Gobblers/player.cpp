@@ -19,7 +19,7 @@ Player::Player(std::string _colour): sColour{_colour} {
 }
 
 Piece * Player::getPiece(Piece::Size size, int id) {
-    return &pieces[size + id - 1];
+    return &pieces[size*2 + id - 1];
 }
 
 std::string Player::getColour() {
